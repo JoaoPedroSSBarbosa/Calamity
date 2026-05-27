@@ -1,16 +1,14 @@
-# Calamity - Dungeon Crawler em C com raylib
+# Calamity - Dungeon Crawler em C
 
-Este projeto agora � um jogo de explora��o de masmorra implementado com **raylib** em C.
+Esse projeto é um jogo do gênero Dungeon Crawler feito apenas em C que roda pelo terminal!
 
 ## Recursos implementados
 
-- `structs` (`Player`, `Enemy`, `Item`, `GameState`)
-- `malloc` / `free` para mapa e listas encadeadas
+- structs (`Player`, `Enemy`, `Item`, `GameState`)
+- ponteiros
+- alocação dinâmina de memória
 - listas encadeadas para inimigos e itens
 - matriz de caracteres para o mapa da masmorra
-- anima��o e movimento com raylib
-- colis�o com paredes, armadilhas e inimigos
-- interação com itens: tesouro, chave, alavanca, poção de vida e melhoria de ataque
 - leitura e escrita de arquivo para salvar o high score
 
 ## Como compilar
@@ -30,15 +28,9 @@ pacman -S mingw-w64-x86_64-raylib
 gcc main.c game.c -o calamity.exe -lraylib -lopengl32 -lgdi32 -lwinmm
 ```
 
-Se voc� usa `pkg-config`:
-
-```bash
-gcc main.c game.c -o calamity $(pkg-config --cflags --libs raylib)
-```
-
 ## Como jogar
 
-Execute o bin�rio gerado:
+Execute o binário gerado:
 
 ```bash
 ./calamity
@@ -49,10 +41,5 @@ Controles:
 - `S` / `Seta para baixo`: descer
 - `A` / `Seta para esquerda`: mover para esquerda
 - `D` / `Seta para direita`: mover para direita
-- `Espa�o`: atacar inimigo adjacente
-- `R`: reiniciar ap�s game over
-
-## Observa��es
-
-- O jogo exibe o mapa da masmorra com inimigos, itens e portas.
-- O `highscore` � salvo em `highscore.txt`.
+- `Espaço`: atacar inimigo adjacente
+- `R`: reiniciar após game over
